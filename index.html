@@ -164,6 +164,7 @@ p{margin:0}
 .more .plus{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--rose);color:var(--rose);display:inline-flex;align-items:center;justify-content:center;font-size:18px;line-height:1;transition:transform .2s}
 .more[open] .plus{transform:rotate(45deg)}
 .more ul{margin:0;padding:0 22px 22px 40px;display:flex;flex-direction:column;gap:8px;color:var(--ink);font-size:14.5px}
+.spec{display:flex;flex-direction:column;gap:18px}.spec-lead{color:var(--ink);font-size:16.5px;line-height:1.8;max-width:760px}.dip li b::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:10px;vertical-align:middle}
 .cortes{display:flex;flex-direction:column;gap:18px}
 .cortes p{color:var(--ink)}
 .pill-row{display:flex;flex-wrap:wrap;gap:10px}
@@ -325,50 +326,47 @@ footer{background:#070B28;color:#B9BDD6;font-size:14px}
   <div class="wrap">
     <div class="sec-head">
       <div class="kicker"><span class="eyebrow">Formación académica</span></div>
-      <h2>Formación, especialización y acreditaciones</h2>
+      <h2>Formación y especialización</h2>
     </div>
 
     <div class="f-block">
-      <div class="f-label"><span class="letter">A</span><h3>Formación universitaria</h3></div>
-      <div class="f-uni"><b>Psicóloga y licenciada en Psicología</b><span>Universidad Santo Tomás</span></div>
+      <div class="f-label"><span class="letter">A</span><h3>Título profesional</h3></div>
+      <div class="f-uni"><b>Psicóloga clínica forense</b><span>Universidad Santo Tomás</span></div>
     </div>
 
     <div class="f-block">
-      <div class="f-label"><span class="letter">B</span><h3>Estudios de especialización</h3><p style="color:var(--muted);font-size:14px">Diplomados agrupados según su área de vinculación.</p></div>
-      <div class="dip-grid">
-        <div class="dip"><span class="area">Psicología Jurídica y Evaluación Forense</span><ul><li><b>Diplomado en Psicología Jurídica: Especialización en Evaluación Psicológica Forense</b><span>Pontificia Universidad Católica de Chile</span></li></ul></div>
-        <div class="dip"><span class="area">Familia y Violencia Intrafamiliar</span><ul><li><b>Diplomado en Violencia de Género con Énfasis en el Ámbito Intrafamiliar</b><span>Universidad de Chile</span></li></ul></div>
-        <div class="dip"><span class="area">Laboral y Salud Mental</span><ul><li><b>Diplomado en Prevención e Investigación del Acoso y la Violencia Laboral</b><span>Pontificia Universidad Católica de Chile</span></li><li><b>Diplomado en Salud Mental y Bienestar Psicosocial en el Trabajo</b><span>Pontificia Universidad Católica de Chile</span></li></ul></div>
-        <div class="dip"><span class="area">Infancia, Protección y Justicia Juvenil</span><ul><li><b>Diplomado en Protección Integral y Justicia Juvenil</b><span>Pontificia Universidad Católica de Chile</span></li></ul></div>
-        <div class="dip"><span class="area">Penal y Criminología</span><ul><li><b>Diplomado en Criminología, Justicia Penal y Políticas de Seguridad</b><span>Pontificia Universidad Católica de Chile</span></li></ul></div>
-      </div>
+      <div class="f-label"><span class="letter">B</span><h3>Diplomado</h3></div>
+      <div class="f-uni"><b>Diplomado en Psicología Jurídica: Especialización en Evaluación Psicológica Forense</b><span>Pontificia Universidad Católica de Chile</span></div>
     </div>
 
     <div class="f-block">
-      <div class="f-label"><span class="letter">C</span><h3>Formación en instrumentos de evaluación psicológica forense</h3></div>
-      <div>
-        <div class="inst-grid">
-          <div class="inst"><span class="num">01</span><h4>Personalidad y psicopatología</h4><p>Formación en instrumentos especializados para la evaluación de características de personalidad, funcionamiento psicológico y psicopatología.</p><div class="chips"><span class="chip">MMPI-2</span><span class="chip">PAI</span></div></div>
-          <div class="inst"><span class="num">02</span><h4>Evaluación de riesgo de violencia</h4><p>Formación en herramientas de evaluación estructurada de factores de riesgo, utilizadas en distintos contextos de valoración de violencia y riesgo.</p><div class="chips"><span class="chip">HCR-20</span><span class="chip">SARA</span><span class="chip">SVR-20</span></div></div>
-          <div class="inst"><span class="num">03</span><h4>Evaluación de características psicopáticas</h4><p>Formación en PCL-R, instrumento especializado en la evaluación de características de psicopatía en contextos pertinentes.</p><div class="chips"><span class="chip">PCL-R</span></div></div>
-          <div class="inst"><span class="num">04</span><h4>Análisis de declaraciones y testimonio</h4><p>Formación en procedimientos utilizados para el análisis estructurado de declaraciones en contextos forenses, considerando sus alcances y limitaciones metodológicas.</p><div class="chips"><span class="chip">CBCA/SVA</span></div></div>
-        </div>
-        <details class="more">
-          <summary>Cursos complementarios <span class="plus" aria-hidden="true">+</span></summary>
+      <div class="f-label"><span class="letter">C</span><h3>Formación especializada</h3></div>
+      <div class="spec">
+        <p class="spec-lead">Capacitación en evaluación psicológica forense, análisis de personalidad, competencias parentales, daño psíquico y valoración del riesgo de violencia.</p>
+        <div class="dip">
+          <span class="area">Cursos destacados</span>
           <ul>
-            <li>Evaluación de competencias parentales</li>
-            <li>Evaluación en contextos de abuso sexual infantil</li>
-            <li>Protección especializada de niños, niñas y adolescentes</li>
-            <li>Evaluación e intervención en trauma</li>
+            <li><b>Evaluación de riesgo de violencia contra la pareja con SARA V3</b></li>
+            <li><b>Evaluación Forense de Daño Psíquico por Acoso Laboral</b></li>
           </ul>
-        </details>
+        </div>
       </div>
     </div>
 
     <div class="f-block">
-      <div class="f-label"><span class="letter">D</span><h3>Nóminas de peritos judiciales</h3></div>
+      <div class="f-label"><span class="letter">D</span><h3>Formación en instrumentos especializados</h3></div>
+      <div class="inst-grid">
+        <div class="inst"><span class="num">01</span><h4>Personalidad y psicopatología</h4><div class="chips"><span class="chip">MMPI-2</span><span class="chip">PAI</span><span class="chip">16PF</span></div></div>
+        <div class="inst"><span class="num">02</span><h4>Evaluación familiar y parental</h4><div class="chips"><span class="chip">NCFAS</span><span class="chip">E2P</span><span class="chip">CUIDA</span><span class="chip">PIB</span><span class="chip">PSI</span></div></div>
+        <div class="inst"><span class="num">03</span><h4>Riesgo de violencia</h4><div class="chips"><span class="chip">PCL-R</span><span class="chip">HCR-20</span><span class="chip">SARA</span><span class="chip">SVR-20</span></div></div>
+        <div class="inst"><span class="num">04</span><h4>Análisis de declaraciones</h4><div class="chips"><span class="chip">CBCA/SVA</span></div></div>
+      </div>
+    </div>
+
+    <div class="f-block">
+      <div class="f-label"><span class="letter">E</span><h3>Nóminas de peritos judiciales</h3></div>
       <div class="cortes">
-        <p>Incorporada en las nóminas de peritos judiciales de las Cortes de Apelaciones de:</p>
+        <p>Incorporada en las nóminas de las Cortes de Apelaciones de:</p>
         <div class="pill-row">
           <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>Santiago</span><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>San Miguel</span><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>Rancagua</span><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>Valparaíso</span>
         </div>
