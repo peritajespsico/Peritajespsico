@@ -173,18 +173,23 @@ p{margin:0}
 @media (max-width:900px){.f-block{grid-template-columns:1fr;gap:20px}.inst-grid{grid-template-columns:1fr}}
 
 /* SERVICIOS */
-.svc-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
-.svc{grid-column:span 2;background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column;gap:14px}
-.svc:nth-child(4){grid-column:2 / span 2}
+.svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+.svc{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:14px}
 .svc-top{display:flex;align-items:center;justify-content:space-between}
 .svc-top .num{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:.08em}
 .svc-top svg{color:var(--rose)}
 .svc p{font-size:15px;line-height:1.7;color:var(--ink)}
-.svc .materias{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
-.svc .materias b{color:var(--navy);font-weight:600}
-.svc .go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;text-decoration:none;padding-top:6px;min-height:44px}
-@media (max-width:1000px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.svc,.svc:nth-child(4){grid-column:auto}.svc:nth-child(5){grid-column:1 / -1}}
-@media (max-width:640px){.svc-grid{grid-template-columns:1fr}.svc:nth-child(5){grid-column:auto}}
+.svc .materias{margin-top:auto;border-top:1px solid var(--line);padding-top:6px}
+.svc .materias summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+.svc .materias summary::-webkit-details-marker{display:none}
+.svc .materias .plus{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--rose);display:inline-flex;align-items:center;justify-content:center;font:18px/1 var(--sans);letter-spacing:0;transition:transform .2s}
+.svc .materias[open] .plus{transform:rotate(45deg)}
+.svc .materias ul{padding-top:6px!important;padding-bottom:4px!important}
+.svc .materias ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.svc .materias li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:var(--ink)}
+.svc .materias li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.svc .go{margin-top:4px;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;text-decoration:none;min-height:44px}
+@media (max-width:900px){.svc-grid{grid-template-columns:1fr}.svc{padding:26px}}
 
 /* ENFOQUE */
 .enfoque{background:var(--ivory)}
@@ -221,6 +226,7 @@ p{margin:0}
 .contacto .eyebrow{color:#E58AA8}
 .contacto-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:6px}
 .contacto .aud{font-size:14px;color:#B9BDD6;letter-spacing:.02em}
+.pago{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:10px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);width:100%;max-width:520px}.pago-label{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#E58AA8}.pago-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.pago-item{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:14px;font-weight:500}.pago-item svg{color:var(--gold)}
 .contacto .goldline{width:56px;height:1.5px;background:var(--gold)}
 
 footer{background:#070B28;color:#B9BDD6;font-size:14px}
@@ -387,36 +393,29 @@ footer{background:#070B28;color:#B9BDD6;font-size:14px}
         <div class="svc-top"><span class="num">01</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6s5.5 2.7 5.5 6M14 20c0-2.6 1.4-4.6 3-4.6s3.5 2 3.5 4.6"/></svg></div>
         <h3>Derecho de Familia</h3>
         <p>Evaluaciones psicológicas orientadas al análisis de competencias parentales, relaciones familiares y condiciones psicológicas relevantes para decisiones que involucran a niños, niñas y adolescentes.</p>
-        <p class="materias"><b>Materias:</b> cuidado personal, relación directa y regular, dinámicas vinculares y factores de protección o riesgo.</p>
+        <details class="materias"><summary><span>Ver materias que se abordan</span><span class="plus" aria-hidden="true">+</span></summary><ul><li>Evaluación de competencias y habilidades parentales</li><li>Cuidado personal y relación directa y regular</li><li>Evaluación del vínculo parentofilial y dinámicas familiares</li><li>Funcionamiento coparental y corresponsabilidad en la crianza</li><li>Interferencias en las relaciones familiares</li><li>Evaluación de consecuencias psicológicas de violencia intrafamiliar y vulneración de derechos de niños, niñas y adolescentes</li><li>Idoneidad para el acogimiento familiar</li><li>Afectación psicológica asociada a conflictos familiares</li><li>Identificación de factores de riesgo y protección, recursos parentales y condiciones psicológicas relevantes para el bienestar y desarrollo integral de niños, niñas y adolescentes</li></ul></details>
         <a class="go" href="https://wa.me/56941409742?text=Hola%20Valentina%2C%20quisiera%20consultar%20por%20una%20evaluaci%C3%B3n%20pericial%20en%20Derecho%20de%20Familia." target="_blank" rel="noopener">Consultar por este servicio <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="svc">
         <div class="svc-top"><span class="num">02</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4.5l5 5M12 7l5 5M9.5 9.5l5 5M13 6l-4.5 4.5M17.5 10.5L13 15M10.5 12.5L3 20M3 21h10"/></svg></div>
         <h3>Derecho Penal</h3>
         <p>Evaluaciones del funcionamiento psicológico y de factores personales relevantes para responder preguntas periciales en procesos penales.</p>
-        <p class="materias"><b>Materias:</b> características psicológicas, impulsividad, factores de riesgo y protección, y antecedentes pertinentes para determinadas decisiones judiciales.</p>
+        <details class="materias"><summary><span>Ver materias que se abordan</span><span class="plus" aria-hidden="true">+</span></summary><ul><li>Evaluación psicológica de personas imputadas, condenadas y víctimas de delitos</li><li>Análisis de personalidad y funcionamiento psicológico</li><li>Impulsividad, autorregulación y control conductual</li><li>Identificación de factores psicológicos de riesgo y protección</li><li>Evaluación de riesgo de violencia interpersonal y de pareja</li><li>Análisis de antecedentes psicológicos relevantes para medidas cautelares y penas sustitutivas</li><li>Evaluación de daño psíquico</li><li>Adaptación psicosocial, recursos personales y factores asociados a procesos de reinserción social</li></ul></details>
         <a class="go" href="https://wa.me/56941409742?text=Hola%20Valentina%2C%20quisiera%20consultar%20por%20una%20evaluaci%C3%B3n%20pericial%20en%20Derecho%20Penal." target="_blank" rel="noopener">Consultar por este servicio <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="svc">
         <div class="svc-top"><span class="num">03</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 12h6M10 16h6"/></svg></div>
         <h3>Derecho Civil</h3>
         <p>Evaluaciones destinadas a identificar y caracterizar eventuales afectaciones psicológicas, considerando su evolución, impacto funcional y antecedentes clínicos y contextuales.</p>
-        <p class="materias"><b>Materias:</b> daño psíquico, responsabilidad civil y evaluación de consecuencias psicológicas de experiencias relevantes para una causa.</p>
+        <details class="materias"><summary><span>Ver materias que se abordan</span><span class="plus" aria-hidden="true">+</span></summary><ul><li>Evaluación de daño psíquico en procedimientos de responsabilidad civil contractual y extracontractual</li><li>Consecuencias psicológicas asociadas a accidentes, presuntas negligencias médicas, experiencias sanitarias adversas y vulneraciones de derechos humanos</li><li>Afectación psicológica derivada de acontecimientos traumáticos, pérdidas significativas y fallecimiento de familiares</li><li>Evaluación de sintomatología ansiosa, depresiva y postraumática</li><li>Repercusiones en la calidad de vida y el funcionamiento personal, familiar, social y ocupacional</li><li>Análisis de la intensidad, persistencia y evolución del daño psicológico, y valoración de la compatibilidad clínica y temporal entre los acontecimientos investigados y la afectación psíquica identificada</li></ul></details>
         <a class="go" href="https://wa.me/56941409742?text=Hola%20Valentina%2C%20quisiera%20consultar%20por%20una%20evaluaci%C3%B3n%20pericial%20en%20Derecho%20Civil." target="_blank" rel="noopener">Consultar por este servicio <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="svc">
         <div class="svc-top"><span class="num">04</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 12h18"/></svg></div>
         <h3>Derecho Laboral</h3>
         <p>Evaluaciones psicológicas relacionadas con eventuales afectaciones asociadas a experiencias laborales, mediante el análisis de antecedentes previos, sintomatología y funcionamiento actual.</p>
-        <p class="materias"><b>Materias:</b> acoso laboral, violencia en el trabajo, desvinculaciones y procedimientos de tutela laboral.</p>
+        <details class="materias"><summary><span>Ver materias que se abordan</span><span class="plus" aria-hidden="true">+</span></summary><ul><li>Evaluación de daño psíquico asociado a situaciones laborales</li><li>Consecuencias psicológicas de acoso laboral, acoso sexual, hostigamiento, discriminación y violencia en el trabajo</li><li>Estrés laboral crónico y síndrome de desgaste profesional (burnout)</li><li>Sintomatología ansiosa, depresiva y postraumática</li><li>Afectación psicológica posterior al despido</li><li>Repercusiones en la salud mental asociadas a hechos denunciados en procedimientos de tutela laboral</li><li>Alteraciones del funcionamiento personal, familiar, social y laboral</li><li>Evaluación de la intensidad, persistencia y evolución de la afectación psicológica, y análisis de compatibilidad clínica y temporal entre los antecedentes laborales y el daño psíquico identificado</li></ul></details>
         <a class="go" href="https://wa.me/56941409742?text=Hola%20Valentina%2C%20quisiera%20consultar%20por%20una%20evaluaci%C3%B3n%20pericial%20en%20Derecho%20Laboral." target="_blank" rel="noopener">Consultar por este servicio <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
-      <article class="svc">
-        <div class="svc-top"><span class="num">05</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
-        <h3>Evaluaciones especializadas</h3>
-        <p>Evaluaciones psicológicas en contextos específicos que requieren conocimientos especializados y una metodología adaptada al objeto del encargo.</p>
-        <p class="materias"><b>Materias:</b> evaluaciones de idoneidad, factores de riesgo y protección y otros requerimientos técnicamente pertinentes.</p>
-        <a class="go" href="https://wa.me/56941409742?text=Hola%20Valentina%2C%20quisiera%20consultar%20por%20una%20evaluaci%C3%B3n%20especializada." target="_blank" rel="noopener">Consultar por este servicio <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
     </div>
   </div>
@@ -442,10 +441,10 @@ footer{background:#070B28;color:#B9BDD6;font-size:14px}
       <h2>Metodología de evaluación</h2>
     </div>
     <div class="steps">
-      <div class="step"><span class="dot">01</span><div><h3>Análisis del requerimiento</h3><p>Se revisa el objeto de la evaluación, los antecedentes disponibles y las preguntas que deben responderse desde la psicología, determinando su pertinencia y factibilidad técnica.</p></div></div>
-      <div class="step"><span class="dot">02</span><div><h3>Evaluación psicológica</h3><p>Se realizan entrevistas clínicas forenses, revisión de antecedentes y aplicación de instrumentos psicológicos pertinentes, según las características del caso.</p></div></div>
-      <div class="step"><span class="dot">03</span><div><h3>Integración de resultados</h3><p>Se contrastan las distintas fuentes de información, considerando la consistencia de los hallazgos, las hipótesis alternativas y las limitaciones de la evaluación.</p></div></div>
-      <div class="step"><span class="dot">04</span><div><h3>Informe y comparecencia judicial</h3><p>Se elabora un informe que presenta los procedimientos, resultados y conclusiones. Cuando corresponde, se realiza su exposición y ratificación ante el tribunal.</p></div></div>
+      <div class="step"><span class="dot">01</span><div><h3>Análisis del requerimiento</h3><p>Revisar el objeto de la evaluación, los antecedentes disponibles y la pregunta requerida por el tribunal que debe responderse desde la psicología, determinando su pertinencia y factibilidad técnica.</p></div></div>
+      <div class="step"><span class="dot">02</span><div><h3>Evaluación psicológica</h3><p>Diseñar la metodología del proceso pericial, que puede incluir entrevistas, aplicación de instrumentos psicológicos pertinentes, entrevistas a terceros y recopilación de nuevos antecedentes.</p></div></div>
+      <div class="step"><span class="dot">03</span><div><h3>Integración de resultados</h3><p>Contrastar las distintas fuentes de información, considerando la consistencia de los hallazgos, las hipótesis alternativas y las limitaciones de la evaluación.</p></div></div>
+      <div class="step"><span class="dot">04</span><div><h3>Informe y comparecencia judicial</h3><p>Elaborar el peritaje psicológico, que incorpora los procedimientos, resultados y conclusiones. Cuando corresponda, realizar su exposición y ratificación ante el tribunal.</p></div></div>
     </div>
     <p class="note">Los procedimientos se determinan según las características y necesidades de cada evaluación.</p>
   </div>
@@ -477,10 +476,17 @@ footer{background:#070B28;color:#B9BDD6;font-size:14px}
     <p class="eyebrow">Contacto</p>
     <h2>¿Necesita una evaluación psicológica pericial?</h2>
     <span class="goldline" aria-hidden="true"></span>
-    <p>Puede contactarme para revisar los antecedentes generales de su solicitud, evaluar la factibilidad del encargo y recibir información sobre el procedimiento y los honorarios.</p>
+    <p>Contácteme para conversar sobre su solicitud y conocer cómo puedo ayudarle desde mi especialidad.</p>
     <div class="contacto-ctas">
       <a class="btn btn-primary" href="https://wa.me/56941409742?text=Hola%20Valentina%2C%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20una%20evaluaci%C3%B3n%20psicol%C3%B3gica%20pericial." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg>Solicitar información</a>
       <a class="btn btn-light btn-mail" href="mailto:valentinabecerrafeliu@gmail.com?subject=Consulta%20por%20evaluaci%C3%B3n%20psicol%C3%B3gica%20pericial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>valentinabecerrafeliu@gmail.com</a>
+    </div>
+    <div class="pago">
+      <span class="pago-label">Formas de pago</span>
+      <div class="pago-row">
+        <span class="pago-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>Tarjeta de débito o crédito</span>
+        <span class="pago-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 21h18"/></svg>Transferencia bancaria</span>
+      </div>
     </div>
     <p class="aud">Atención a abogados, estudios jurídicos y particulares.</p>
   </div>
