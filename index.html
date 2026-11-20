@@ -185,6 +185,17 @@ p{margin:0}
 .pill-btn .chev{color:var(--rose);transition:transform .2s}
 .pill-btn[aria-expanded="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
 .pill-btn[aria-expanded="true"] .chev{transform:rotate(180deg);color:#fff}
+.registros{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.registros .sec-head .lead{font-size:16px}
+.reg-wrap{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.reg-wrap .cortes{align-items:center;text-align:center}
+.reg-wrap .pill-row{justify-content:center}
+.reg-wrap .reg-panel{text-align:left;width:100%}
+.sis{align-self:center;display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border-radius:16px;border:1px solid var(--line);background:var(--cream);margin-top:8px}
+.sis svg{color:var(--gold);flex:none}
+.sis div{display:flex;flex-direction:column;line-height:1.35}
+.sis-label{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+.sis-num{font-family:var(--serif);font-size:19px;color:var(--navy)}
 .reg-hint{font-size:13px;color:var(--muted);margin-top:-4px}
 .reg-panel{border:1px solid var(--line);border-radius:16px;background:var(--cream);padding:20px 22px}
 .reg-title{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin-bottom:12px}
@@ -219,7 +230,7 @@ p{margin:0}
 .enfoque-inner{max-width:860px;margin:0 auto;text-align:center;display:flex;flex-direction:column;gap:24px;align-items:center}
 .enfoque-inner .orn{width:56px;height:1.5px;background:var(--gold)}
 .enfoque-inner p{font-size:18px;line-height:1.9;color:var(--ink)}
-.enfoque-inner p.first{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);line-height:1.6;color:var(--navy)}
+.enfoque-inner p.first{}
 
 /* METODOLOGIA */
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative}
@@ -402,6 +413,33 @@ footer{background:#070B28;color:#B9BDD6;font-size:14px}
   </div>
 </section>
 
+<!-- REGISTROS -->
+<section id="registros" class="section registros">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="kicker"><span class="eyebrow">Registros profesionales</span></div>
+      <h2>Nóminas de peritos judiciales</h2>
+      <p class="lead">Incorporada en las nóminas de peritos judiciales de las Cortes de Apelaciones de:</p>
+    </div>
+    <div class="reg-wrap">
+      <div class="cortes">
+        
+        <div class="pill-row">
+          <button type="button" class="pill pill-btn" aria-expanded="false" aria-controls="reg-santiago"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>Santiago<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pill pill-btn" aria-expanded="false" aria-controls="reg-sanmiguel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>San Miguel<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pill pill-btn" aria-expanded="false" aria-controls="reg-rancagua"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>Rancagua<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>Valparaíso</span>
+        </div>
+        <p class="reg-hint">Seleccione una Corte para ver los números de registro.</p>
+        <div class="reg-panel" id="reg-santiago" hidden><p class="reg-title">Corte de Apelaciones de Santiago · Especialidad Psicología</p><ul class="reg-list"><li><span class="reg-n">N° 271757</span><span class="reg-e">Forense</span></li><li><span class="reg-n">N° 271754</span><span class="reg-e">Clínica</span></li><li><span class="reg-n">N° 271756</span><span class="reg-e">Niños, Adolescentes y Familia</span></li><li><span class="reg-n">N° 271764</span><span class="reg-e">Sin mención</span></li></ul></div>
+        <div class="reg-panel" id="reg-sanmiguel" hidden><p class="reg-title">Corte de Apelaciones de San Miguel · Especialidad Psicología</p><ul class="reg-list"><li><span class="reg-n">N° 271767</span><span class="reg-e">Forense</span></li><li><span class="reg-n">N° 271766</span><span class="reg-e">Clínica</span></li><li><span class="reg-n">N° 271769</span><span class="reg-e">Niños, Adolescentes y Familia</span></li><li><span class="reg-n">N° 271770</span><span class="reg-e">Sin mención</span></li></ul></div>
+        <div class="reg-panel" id="reg-rancagua" hidden><p class="reg-title">Corte de Apelaciones de Rancagua · Especialidad Psicología</p><ul class="reg-list"><li><span class="reg-n">N° 271810</span><span class="reg-e">Forense</span></li><li><span class="reg-n">N° 271807</span><span class="reg-e">Clínica</span></li><li><span class="reg-n">N° 271813</span><span class="reg-e">Niños, Adolescentes y Familia</span></li><li><span class="reg-n">N° 271814</span><span class="reg-e">Sin mención</span></li></ul></div>
+      </div>
+      <div class="sis">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6l8-3z"/><path d="M12 8v8M8 12h8"/></svg>
+        <div><span class="sis-label">Superintendencia de Salud</span><span class="sis-num">N° de Registro SIS 511020</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ENFOQUE -->
 <section id="enfoque" class="section enfoque">
   <div class="wrap enfoque-inner">
@@ -477,10 +515,9 @@ footer{background:#070B28;color:#B9BDD6;font-size:14px}
   <div class="wrap ftr">
     <div>
       <div style="font-family:var(--serif);font-size:20px;color:#fff">peritajespsico<span style="color:#E58AA8">.cl</span></div>
-      <div>Ps. Valentina Becerra Feliú · Psicóloga Clínica Forense · Chile</div>
+      <div>Ps. Valentina Becerra Feliú · Psicóloga Clínica Forense · Registro SIS 511020 · Chile</div>
     </div>
     <div class="ftr-links">
-      <a href="https://www.linkedin.com/in/psvalentinabef/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:valentinabecerrafeliu@gmail.com?subject=Consulta%20por%20evaluaci%C3%B3n%20psicol%C3%B3gica%20pericial">Correo</a>
       <span>© 2026</span>
     </div>
@@ -529,20 +566,6 @@ footer{background:#070B28;color:#B9BDD6;font-size:14px}
         <div class="inst"><h4>Evaluación familiar y parental</h4><div class="chips"><span class="chip">NCFAS</span><span class="chip">E2P</span><span class="chip">CUIDA</span><span class="chip">PIB</span><span class="chip">PSI</span></div></div>
         <div class="inst"><h4>Riesgo de violencia</h4><div class="chips"><span class="chip">PCL-R</span><span class="chip">HCR-20</span><span class="chip">SARA</span><span class="chip">SVR-20</span></div></div>
         <div class="inst"><h4>Análisis de declaraciones</h4><div class="chips"><span class="chip">CBCA/SVA</span></div></div>
-      </div>
-    </div>
-
-    <div class="f-block">
-      <div class="f-label"><h3>Nóminas de peritos judiciales</h3></div>
-      <div class="cortes">
-        <p>Incorporada en las nóminas de las Cortes de Apelaciones de:</p>
-        <div class="pill-row">
-          <button type="button" class="pill pill-btn" aria-expanded="false" aria-controls="reg-santiago"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>Santiago<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pill pill-btn" aria-expanded="false" aria-controls="reg-sanmiguel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>San Miguel<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button type="button" class="pill pill-btn" aria-expanded="false" aria-controls="reg-rancagua"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>Rancagua<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg>Valparaíso</span>
-        </div>
-        <p class="reg-hint">Seleccione una Corte para ver los números de registro.</p>
-        <div class="reg-panel" id="reg-santiago" hidden><p class="reg-title">Corte de Apelaciones de Santiago · Especialidad Psicología</p><ul class="reg-list"><li><span class="reg-n">N° 271757</span><span class="reg-e">Forense</span></li><li><span class="reg-n">N° 271754</span><span class="reg-e">Clínica</span></li><li><span class="reg-n">N° 271756</span><span class="reg-e">Niños, Adolescentes y Familia</span></li><li><span class="reg-n">N° 271764</span><span class="reg-e">Sin mención</span></li></ul></div>
-        <div class="reg-panel" id="reg-sanmiguel" hidden><p class="reg-title">Corte de Apelaciones de San Miguel · Especialidad Psicología</p><ul class="reg-list"><li><span class="reg-n">N° 271767</span><span class="reg-e">Forense</span></li><li><span class="reg-n">N° 271766</span><span class="reg-e">Clínica</span></li><li><span class="reg-n">N° 271769</span><span class="reg-e">Niños, Adolescentes y Familia</span></li><li><span class="reg-n">N° 271770</span><span class="reg-e">Sin mención</span></li></ul></div>
-        <div class="reg-panel" id="reg-rancagua" hidden><p class="reg-title">Corte de Apelaciones de Rancagua · Especialidad Psicología</p><ul class="reg-list"><li><span class="reg-n">N° 271810</span><span class="reg-e">Forense</span></li><li><span class="reg-n">N° 271807</span><span class="reg-e">Clínica</span></li><li><span class="reg-n">N° 271813</span><span class="reg-e">Niños, Adolescentes y Familia</span></li><li><span class="reg-n">N° 271814</span><span class="reg-e">Sin mención</span></li></ul></div>
       </div>
     </div>
   </div>
